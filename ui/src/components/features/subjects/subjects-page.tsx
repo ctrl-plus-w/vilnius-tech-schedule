@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { Button, Flex } from '@radix-ui/themes';
 import { setHours, setMinutes } from 'date-fns';
+import useLocalStorageState from 'use-local-storage-state';
 
 import SelectCoursesSheet from '@/feature/subjects/select-courses-sheet';
 
@@ -23,7 +24,9 @@ export interface SubjectsPageProps {
 const SubjectsPage = ({ subjects }: SubjectsPageProps) => {
   const getColor = useSubjectsColor();
 
-  const [selectedSubjects, setSelectedSubjects] = useState<Record<string, string>>({});
+  const [selectedSubjects, setSelectedSubjects] = useLocalStorageState<Record<string, string>>('selected-subjects', {
+    defaultValue: {},
+  });
 
   const subjectsAsEvents = useMemo(() => {
     return subjects
