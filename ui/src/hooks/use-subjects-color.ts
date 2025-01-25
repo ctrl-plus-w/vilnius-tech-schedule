@@ -1,4 +1,6 @@
-import { SetStateAction, useLayoutEffect, useMemo, useState } from 'react';
+import { SetStateAction, useLayoutEffect, useMemo } from 'react';
+
+import { useSubjectsColorContext } from '@/context/subjects-color-context';
 
 import { accentColors, Colors, getLeastUsedColors } from '@/util/colors';
 
@@ -22,18 +24,14 @@ const sanitizeColors = (colors: Record<string, unknown>): SubjectsColors => {
 };
 
 const useSubjectsColor = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [colors, setColorsState] = useState<SubjectsColors>({});
+  const { isLoading, setIsLoading, colors, setColors: setColorsState } = useSubjectsColorContext();
 
   useLayoutEffect(() => {
-    if (typeof window === 'undefined') return;
-
     setIsLoading(true);
 
     const _colors = localStorage.getItem('subjects-colors');
-    if (!_colors) return;
+    if (_colors) setColorsState(sanitizeColors(JSON.parse(_colors)));
 
-    setColorsState(sanitizeColors(JSON.parse(_colors)));
     setIsLoading(false);
   }, []);
 
