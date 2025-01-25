@@ -5,7 +5,7 @@ import { Flex } from '@radix-ui/themes';
 import * as Schedule from '@/feature/schedule';
 
 import useBreakpointIntervalKind from '@/hook/use-breakpoint-interval-kind';
-import useSchedulerInterval from '@/hook/use-schedule-interval';
+import useScheduleInterval from '@/hook/use-schedule-interval';
 
 import { TScheduleEvent } from '@/type/schedule';
 
@@ -15,7 +15,7 @@ export interface SubjectsScheduleProps {
 
 const SubjectsSchedule = ({ events }: SubjectsScheduleProps) => {
   const intervalKind = useBreakpointIntervalKind();
-  const { prev, curr, next, interval } = useSchedulerInterval(intervalKind);
+  const { prev, curr, next, interval } = useScheduleInterval(intervalKind);
 
   return (
     <Flex direction="column" minHeight="0">
