@@ -1,0 +1,82 @@
+{
+  "name": "Basics of Distributed Systems 2024-2025 AY spring semester lecture schedule",
+  "id": "FMISB23800",
+  "courseDays": {
+    "2025-02-03 — 2025-04-26": {
+      "wednesday": [
+        {
+          "lecture": 2,
+          "group": "ITVf-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 310Auditorium P3(TRIII) 310: Plytinės g. 27 - Plytines campus - Third building 310 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "ITVf-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "12:10-13:45",
+          "week": "2",
+          "auditorium": "P3(TRIII) 310Auditorium P3(TRIII) 310: Plytinės g. 27 - Plytines campus - Third building 310 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "ITVf-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "12:10-13:45",
+          "week": "1",
+          "auditorium": "P3(TRIII) 310Auditorium P3(TRIII) 310: Plytinės g. 27 - Plytines campus - Third building 310 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 4,
+          "group": "FINfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 205Auditorium S5(SRK-II) 205: Saulėtekio al. 11 - Saulėtekio Campus - Second building 205 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITVfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 205Auditorium S5(SRK-II) 205: Saulėtekio al. 11 - Saulėtekio Campus - Second building 205 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 5,
+          "group": "FINfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 5,
+          "group": "FINfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 5,
+          "group": "ITVfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 5,
+          "group": "ITVfu-22Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ]
+    }
+  }
+}

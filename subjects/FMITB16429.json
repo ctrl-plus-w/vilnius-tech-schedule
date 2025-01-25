@@ -1,0 +1,204 @@
+{
+  "name": "Object-Oriented Programming (with course work) 2024-2025 AY spring semester lecture schedule",
+  "id": "FMITB16429",
+  "courseDays": {
+    "2025-02-03 — 2025-05-18": {
+      "wednesday": [
+        {
+          "lecture": 1,
+          "group": "ITfu-24/2Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 1,
+          "group": "MTMfu-24Faculty of Fundamental Sciences, Mathematics of Modern Technologies 612G12001",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 3,
+          "group": "ITfu-24/1Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "ITfu-24/2Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "MTMfu-24Faculty of Fundamental Sciences, Mathematics of Modern Technologies 612G12001",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 5,
+          "group": "ITfu-24/1Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 201Auditorium P3(TRIII) 201: Plytinės g. 27 - Plytines campus - Third building 201 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ]
+    },
+    "2025-02-03 — 2025-05-23": {
+      "monday": [
+        {
+          "lecture": 4,
+          "group": "ISf-24/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITf-24Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIfs-24Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/1Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/2Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/3Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        }
+      ],
+      "tuesday": [
+        {
+          "lecture": 2,
+          "group": "PRIf-24/3Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 3,
+          "group": "ISf-24/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ],
+      "wednesday": [
+        {
+          "lecture": 1,
+          "group": "PRIf-24/1Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 2,
+          "group": "PRIfs-24Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 205Auditorium P3(TRIII) 205: Plytinės g. 27 - Plytines campus - Third building 205 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 2,
+          "group": "PRIf-24/2Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 4,
+          "group": "ITf-24Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 427Auditorium S6(SRL-I) 427: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 427 auditorium",
+          "type": "Consultation"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIfs-24Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 427Auditorium S6(SRL-I) 427: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 427 auditorium",
+          "type": "Consultation"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/1Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 427Auditorium S6(SRL-I) 427: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 427 auditorium",
+          "type": "Consultation"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/2Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 427Auditorium S6(SRL-I) 427: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 427 auditorium",
+          "type": "Consultation"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/3Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 427Auditorium S6(SRL-I) 427: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 427 auditorium",
+          "type": "Consultation"
+        }
+      ],
+      "thursday": [
+        {
+          "lecture": 5,
+          "group": "ITf-24Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 201Auditorium S5(SRK-II) 201: Saulėtekio al. 11 - Saulėtekio Campus - Second building 201 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ]
+    }
+  }
+}

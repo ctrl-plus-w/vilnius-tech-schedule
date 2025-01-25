@@ -1,0 +1,92 @@
+{
+  "name": "Human Computer Interaction 2024-2025 AY spring semester lecture schedule",
+  "id": "FMGSB24601",
+  "courseDays": {
+    "2025-02-03 — 2025-05-23": {
+      "monday": [
+        {
+          "lecture": 1,
+          "group": "MKDfu-24Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 604Auditorium S5(SRK-II) 604: Saulėtekio al. 11 - Saulėtekio Campus - Second building 604 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDfu-24Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 604Auditorium S5(SRK-II) 604: Saulėtekio al. 11 - Saulėtekio Campus - Second building 604 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDfs-24Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A09Auditorium S4(SRA-II) A09: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A09 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-24/1Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A09Auditorium S4(SRA-II) A09: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A09 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-24/2Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A09Auditorium S4(SRA-II) A09: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A09 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-24/3Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A09Auditorium S4(SRA-II) A09: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A09 auditorium",
+          "type": "Lectures"
+        }
+      ],
+      "friday": [
+        {
+          "lecture": 1,
+          "group": "MKDf-24/2Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 612Auditorium S5(SRK-II) 612: Saulėtekio al. 11 - Saulėtekio Campus - Second building 612 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDfs-24Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 604Auditorium S5(SRK-II) 604: Saulėtekio al. 11 - Saulėtekio Campus - Second building 604 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-24/3Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 612Auditorium S5(SRK-II) 612: Saulėtekio al. 11 - Saulėtekio Campus - Second building 612 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-24/1Faculty of Fundamental Sciences, Multimedia Design 612E14003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 604Auditorium S5(SRK-II) 604: Saulėtekio al. 11 - Saulėtekio Campus - Second building 604 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ]
+    }
+  }
+}

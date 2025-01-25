@@ -1,0 +1,220 @@
+{
+  "name": "Discrete Mathematics 2 2024-2025 AY spring semester lecture schedule",
+  "id": "FMMMB16202",
+  "courseDays": {
+    "2025-02-03 — 2025-05-18": {
+      "monday": [
+        {
+          "lecture": 3,
+          "group": "ITfu-24/1",
+          "time": "12:10-13:45",
+          "week": "1",
+          "auditorium": "S6(SRL-I) 332Auditorium S6(SRL-I) 332: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 332 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 6,
+          "group": "ITfu-24/2",
+          "time": "18:10-19:45",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 332Auditorium S6(SRL-I) 332: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 332 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ],
+      "wednesday": [
+        {
+          "lecture": 2,
+          "group": "ITfu-24/1",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 2,
+          "group": "ITfu-24/2",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITfu-24/1",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 4,
+          "group": "ITfu-24/1",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITfu-24/2",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "P3(TRIII) 114Auditorium P3(TRIII) 114: Plytinės g. 27 - Plytines campus - Third building 114 auditorium",
+          "type": "Lectures"
+        }
+      ]
+    },
+    "2025-02-03 — 2025-05-23": {
+      "tuesday": [
+        {
+          "lecture": 2,
+          "group": "PRIf-24/2",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 205Auditorium S5(SRK-II) 205: Saulėtekio al. 11 - Saulėtekio Campus - Second building 205 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIf-24/1",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 205Auditorium S5(SRK-II) 205: Saulėtekio al. 11 - Saulėtekio Campus - Second building 205 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ],
+      "wednesday": [
+        {
+          "lecture": 1,
+          "group": "PRIf-24/3",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 206Auditorium S5(SRK-II) 206: Saulėtekio al. 11 - Saulėtekio Campus - Second building 206 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "ISf-24/1",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 401Auditorium S6(SRL-I) 401: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 401 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "ITf-24",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 203Auditorium P3(TRIII) 203: Plytinės g. 27 - Plytines campus - Third building 203 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIfs-24",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 106Auditorium P3(TRIII) 106: Plytinės g. 27 - Plytines campus - Third building 106 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ],
+      "thursday": [
+        {
+          "lecture": 3,
+          "group": "ISf-24/1",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "ITf-24",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIfs-24",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIf-24/1",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIf-24/2",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "PRIf-24/3",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ISf-24/1",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITf-24",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIfs-24",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/1",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/2",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/3",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Programming Techniques (with course project) 2024-2025 AY spring semester lecture schedule",
+  "id": "VVVKB17159",
+  "courseDays": {
+    "2025-02-03 — 2025-04-26": {
+      "monday": [
+        {
+          "lecture": 1,
+          "group": "ITf-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "08:30-10:05",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 201Auditorium S5(SRK-II) 201: Saulėtekio al. 11 - Saulėtekio Campus - Second building 201 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "ITf-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 201Auditorium S5(SRK-II) 201: Saulėtekio al. 11 - Saulėtekio Campus - Second building 201 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 4,
+          "group": "ITfu-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "2",
+          "auditorium": "P3(TRIII) 206Auditorium P3(TRIII) 206: Plytinės g. 27 - Plytines campus - Third building 206 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ],
+      "tuesday": [
+        {
+          "lecture": 2,
+          "group": "ITfu-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "10:20-11:55",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 401Auditorium S6(SRL-I) 401: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 401 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 3,
+          "group": "ITfu-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "S5(SRK-II) 201Auditorium S5(SRK-II) 201: Saulėtekio al. 11 - Saulėtekio Campus - Second building 201 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ],
+      "wednesday": [
+        {
+          "lecture": 1,
+          "group": "ISf-23/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "08:30-10:05",
+          "week": "1",
+          "auditorium": "P3(TRIII) 205Auditorium P3(TRIII) 205: Plytinės g. 27 - Plytines campus - Third building 205 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "ISf-23/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "12:10-13:45",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 4,
+          "group": "ISf-23/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITf-23Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "-",
+          "auditorium": "P3(TRIII) 202Auditorium P3(TRIII) 202: Plytinės g. 27 - Plytines campus - Third building 202 auditorium",
+          "type": "Lectures"
+        }
+      ]
+    }
+  }
+}

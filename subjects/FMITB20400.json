@@ -1,0 +1,244 @@
+{
+  "name": "Philosophy 2024-2025 AY spring semester lecture schedule",
+  "id": "FMITB20400",
+  "courseDays": {
+    "2025-02-03 — 2025-05-18": {
+      "monday": [
+        {
+          "lecture": 4,
+          "group": "ITfu-24/1Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITfu-24/2Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 5,
+          "group": "ITfu-24/1Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 5,
+          "group": "ITfu-24/2Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ]
+    },
+    "2025-02-03 — 2025-05-23": {
+      "monday": [
+        {
+          "lecture": 4,
+          "group": "BIfu-24Faculty of Fundamental Sciences, Bioengineering 612J76001",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 5,
+          "group": "BIfu-24Faculty of Fundamental Sciences, Bioengineering 612J76001",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ],
+      "thursday": [
+        {
+          "lecture": 2,
+          "group": "ISf-24/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "10:20-11:55",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "ITf-24Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "10:20-11:55",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "BIf-24Faculty of Fundamental Sciences, Bioengineering 612J76001",
+          "time": "12:10-13:45",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "DATf-24Faculty of Fundamental Sciences, Data Analysis Technologies 612G31001",
+          "time": "12:10-13:45",
+          "week": "1",
+          "auditorium": "S2(SRA-I) A01Auditorium S2(SRA-I) A01: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A01 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 4,
+          "group": "BIf-24Faculty of Fundamental Sciences, Bioengineering 612J76001",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "DATf-24Faculty of Fundamental Sciences, Data Analysis Technologies 612G31001",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ISf-24/1Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "ITf-24Faculty of Fundamental Sciences, Information Technologies 6121BX033",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIfs-24Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/1Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/2Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 4,
+          "group": "PRIf-24/3Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "14:30-16:05",
+          "week": "1",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 5,
+          "group": "PRIfs-24Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "16:20-17:55",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 5,
+          "group": "PRIf-24/1Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S6(SRL-I) 401Auditorium S6(SRL-I) 401: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 401 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 5,
+          "group": "PRIf-24/2Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "16:20-17:55",
+          "week": "1",
+          "auditorium": "S6(SRL-I) 401Auditorium S6(SRL-I) 401: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 401 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 5,
+          "group": "PRIf-24/3Faculty of Fundamental Sciences, Software Engineering 612I30003",
+          "time": "16:20-17:55",
+          "week": "2",
+          "auditorium": "S4(SRA-II) A10Auditorium S4(SRA-II) A10: Saulėtekio al. 11 - Saulėtekio Campus - Second auditorium building A10 auditorium",
+          "type": "Practical exercises (practical work)"
+        }
+      ]
+    },
+    "2025-02-18": {
+      "tuesday": [
+        {
+          "lecture": 6,
+          "group": "ISit-24Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "18:10-19:45",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 526-1Auditorium S6(SRL-I) 526-1: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 526-1 auditorium",
+          "type": "Lectures (VK)"
+        }
+      ]
+    },
+    "2025-03-18": {
+      "tuesday": [
+        {
+          "lecture": 1,
+          "group": "ISit-24Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "-",
+          "type": "Lectures (VĮ)"
+        },
+        {
+          "lecture": 6,
+          "group": "ISit-24Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "18:10-19:45",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 526-1Auditorium S6(SRL-I) 526-1: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 526-1 auditorium",
+          "type": "Lectures (VK)"
+        }
+      ]
+    },
+    "2025-04-15": {
+      "tuesday": [
+        {
+          "lecture": 1,
+          "group": "ISit-24Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "08:30-10:05",
+          "week": "-",
+          "auditorium": "-",
+          "type": "Lectures (VĮ)"
+        },
+        {
+          "lecture": 6,
+          "group": "ISit-24Faculty of Fundamental Sciences, Information Systems 612I20003",
+          "time": "18:10-19:45",
+          "week": "-",
+          "auditorium": "S6(SRL-I) 526-1Auditorium S6(SRL-I) 526-1: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 526-1 auditorium",
+          "type": "Lectures (VK)"
+        }
+      ]
+    }
+  }
+}

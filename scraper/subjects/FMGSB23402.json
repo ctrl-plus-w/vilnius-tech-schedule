@@ -1,0 +1,134 @@
+{
+  "name": "Visualization Systems 2024-2025 AY spring semester lecture schedule",
+  "id": "FMGSB23402",
+  "courseDays": {
+    "2025-02-03 — 2025-05-23": {
+      "monday": [
+        {
+          "lecture": 1,
+          "group": "MKDfu-22",
+          "time": "08:30-10:05",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 612Auditorium S5(SRK-II) 612: Saulėtekio al. 11 - Saulėtekio Campus - Second building 612 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 1,
+          "group": "MKDfu-22",
+          "time": "08:30-10:05",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 612Auditorium S5(SRK-II) 612: Saulėtekio al. 11 - Saulėtekio Campus - Second building 612 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ],
+      "tuesday": [
+        {
+          "lecture": 1,
+          "group": "MKDf-22/3",
+          "time": "08:30-10:05",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 1,
+          "group": "MKDf-22/3",
+          "time": "08:30-10:05",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDfs-22",
+          "time": "10:20-11:55",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDfs-22",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-22/1",
+          "time": "10:20-11:55",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-22/1",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-22/2",
+          "time": "12:10-13:45",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Practical exercises (practical work)"
+        },
+        {
+          "lecture": 3,
+          "group": "MKDf-22/2",
+          "time": "12:10-13:45",
+          "week": "2",
+          "auditorium": "S5(SRK-II) 611Auditorium S5(SRK-II) 611: Saulėtekio al. 11 - Saulėtekio Campus - Second building 611 auditorium",
+          "type": "Laboratory work (laboratory works)"
+        }
+      ],
+      "thursday": [
+        {
+          "lecture": 2,
+          "group": "MKDfs-22",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S2(SRA-I) A02Auditorium S2(SRA-I) A02: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A02 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDfu-22",
+          "time": "10:20-11:55",
+          "week": "1",
+          "auditorium": "S5(SRK-II) 603Auditorium S5(SRK-II) 603: Saulėtekio al. 11 - Saulėtekio Campus - Second building 603 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-22/1",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S2(SRA-I) A02Auditorium S2(SRA-I) A02: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A02 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-22/2",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S2(SRA-I) A02Auditorium S2(SRA-I) A02: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A02 auditorium",
+          "type": "Lectures"
+        },
+        {
+          "lecture": 2,
+          "group": "MKDf-22/3",
+          "time": "10:20-11:55",
+          "week": "2",
+          "auditorium": "S2(SRA-I) A02Auditorium S2(SRA-I) A02: Saulėtekio al. 11 - Saulėtekio Campus - First auditorium building A02 auditorium",
+          "type": "Lectures"
+        }
+      ]
+    }
+  }
+}
