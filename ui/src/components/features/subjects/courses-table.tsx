@@ -21,7 +21,7 @@ const CoursesTable = ({ subjects, selectedSubjects, setSelectedSubjects }: Cours
   const toggleGroup = (subject: Subject, group: string) => {
     setSelectedSubjects((prev) => {
       const res = { ...prev, [subject.id]: group };
-      if (subject.id in prev) delete res[subject.id];
+      if (subject.id in prev && prev[subject.id] === group) delete res[subject.id];
       return res;
     });
   };
