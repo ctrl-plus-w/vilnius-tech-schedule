@@ -30,7 +30,8 @@
     "react-hook-form": "^7.53.0",
     "tailwindcss": "^3.4.4",
     "tw-merge": "0.0.1-alpha.3",
-    "use-breakpoint": "^4.0.5"
+    "use-breakpoint": "^4.0.5",
+    "use-local-storage-state": "^19.5.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

@@ -1,11 +1,14 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useMemo } from 'react';
 
-import { Button, Checkbox, Code, Table } from '@radix-ui/themes';
+import { Code, Flex, Switch, Text } from '@radix-ui/themes';
+import useLocalStorageState from 'use-local-storage-state';
 
 import CoursesTable from '@/feature/subjects/courses-table';
 
 import * as Sheet from '@/element/sheet';
 import { SheetRootProps } from '@/element/sheet';
+
+import { mapValues } from '@/util/object';
 
 import { Subject } from '@/type/subjects';
 
@@ -23,6 +26,19 @@ const SelectCoursesSheet = ({
   children,
   ...props
 }: SelectCoursesSheetProps) => {
+  const [onlyFu, setOnlyFu] = useLocalStorageState('only-fu', { defaultValue: false });
+
+  const filteredSubjects = useMemo(() => {
+    if (!onlyFu) return subjects;
+
+    return subjects.map((subject) => ({
+      ...subject,
+      courseDays: mapValues(subject.courseDays, (interval) =>
+        mapValues(interval, (course) => course.filter(({ group }) => group.includes('fu'))),
+      ),
+    }));
+  }, [subjects, onlyFu]);
+
   return (
     <Sheet.Root {...props}>
       <Sheet.Trigger>{children}</Sheet.Trigger>
@@ -33,7 +49,16 @@ const SelectCoursesSheet = ({
         <Sheet.Title>Select the courses</Sheet.Title>
         <Sheet.Description></Sheet.Description>
 
-        <CoursesTable {...{ subjects, selectedSubjects, setSelectedSubjects }} />
+        <Flex align="center" gap="1" my="2" asChild>
+          <label htmlFor="only-fu">
+            <Switch id="only-fu" checked={onlyFu} onCheckedChange={setOnlyFu} />
+            <Text>
+              Only show <Code>fu</Code> groups
+            </Text>
+          </label>
+        </Flex>
+
+        <CoursesTable {...{ subjects: filteredSubjects, selectedSubjects, setSelectedSubjects }} />
       </Sheet.Content>
     </Sheet.Root>
   );
