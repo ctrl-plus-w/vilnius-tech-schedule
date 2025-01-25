@@ -1,13 +1,14 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { addDays, addWeeks } from 'date-fns';
+import useLocalStorageState from 'use-local-storage-state';
 
 import { cleanIntervalTime, getWeekInterval } from '@/util/date';
 
 import { IntervalKind } from '@/type/schedule';
 
-const useSchedulerInterval = (intervalKind: IntervalKind, defaultSelected: Date = new Date()) => {
-  const [selected, setSelected] = useState(defaultSelected);
+const useScheduleInterval = (intervalKind: IntervalKind, defaultSelected: Date = new Date()) => {
+  const [selected, setSelected] = useLocalStorageState('schedule-selected-date', { defaultValue: defaultSelected });
 
   const interval = useMemo(() => {
     switch (intervalKind) {
@@ -64,4 +65,4 @@ const useSchedulerInterval = (intervalKind: IntervalKind, defaultSelected: Date 
   };
 };
 
-export default useSchedulerInterval;
+export default useScheduleInterval;
