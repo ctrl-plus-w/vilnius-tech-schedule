@@ -55,60 +55,129 @@ const ScheduleEvent = ({ event }: IProps) => {
             kind === EventKind.SINGLE && 'rounded-2',
             originalEvent.isLive && 'rounded-b-[0] border border-dashed',
             originalEvent.color === 'gray' &&
-              cn('bg-gray-5 text-grayA-11 hover:outline-grayA-11', originalEvent.isLive && 'border-grayA-11'),
+              cn(
+                'border-gray-7 bg-gray-5 text-grayA-11 hover:outline-grayA-11',
+                originalEvent.isLive && 'border-grayA-11',
+              ),
             originalEvent.color === 'gold' &&
-              cn('bg-gold-5 text-goldA-11 hover:outline-goldA-11', originalEvent.isLive && 'border-goldA-11'),
+              cn(
+                'border-gold-7 bg-gold-5 text-goldA-11 hover:outline-goldA-11',
+                originalEvent.isLive && 'border-goldA-11',
+              ),
             originalEvent.color === 'bronze' &&
-              cn('bg-bronze-5 text-bronzeA-11 hover:outline-bronzeA-11', originalEvent.isLive && 'border-bronzeA-11'),
+              cn(
+                'border-bronze-7 bg-bronze-5 text-bronzeA-11 hover:outline-bronzeA-11',
+                originalEvent.isLive && 'border-bronzeA-11',
+              ),
             originalEvent.color === 'brown' &&
-              cn('bg-brown-5 text-brownA-11 hover:outline-brownA-11', originalEvent.isLive && 'border-brownA-11'),
+              cn(
+                'border-brown-7 bg-brown-5 text-brownA-11 hover:outline-brownA-11',
+                originalEvent.isLive && 'border-brownA-11',
+              ),
             originalEvent.color === 'yellow' &&
-              cn('bg-yellow-5 text-yellowA-11 hover:outline-yellowA-11', originalEvent.isLive && 'border-yellowA-11'),
+              cn(
+                'border-yellow-7 bg-yellow-5 text-yellowA-11 hover:outline-yellowA-11',
+                originalEvent.isLive && 'border-yellowA-11',
+              ),
             originalEvent.color === 'amber' &&
-              cn('bg-amber-5 text-amberA-11 hover:outline-amberA-11', originalEvent.isLive && 'border-amberA-11'),
+              cn(
+                'border-amber-7 bg-amber-5 text-amberA-11 hover:outline-amberA-11',
+                originalEvent.isLive && 'border-amberA-11',
+              ),
             originalEvent.color === 'orange' &&
-              cn('bg-orange-5 text-orangeA-11 hover:outline-orangeA-11', originalEvent.isLive && 'border-orangeA-11'),
+              cn(
+                'border-orange-7 bg-orange-5 text-orangeA-11 hover:outline-orangeA-11',
+                originalEvent.isLive && 'border-orangeA-11',
+              ),
             originalEvent.color === 'tomato' &&
-              cn('bg-tomato-5 text-tomatoA-11 hover:outline-tomatoA-11', originalEvent.isLive && 'border-tomatoA-11'),
+              cn(
+                'border-tomato-7 bg-tomato-5 text-tomatoA-11 hover:outline-tomatoA-11',
+                originalEvent.isLive && 'border-tomatoA-11',
+              ),
             originalEvent.color === 'red' &&
-              cn('bg-red-5 text-redA-11 hover:outline-redA-11', originalEvent.isLive && 'border-redA-11'),
+              cn('border-red-7 bg-red-5 text-redA-11 hover:outline-redA-11', originalEvent.isLive && 'border-redA-11'),
             originalEvent.color === 'ruby' &&
-              cn('bg-ruby-5 text-rubyA-11 hover:outline-rubyA-11', originalEvent.isLive && 'border-rubyA-11'),
+              cn(
+                'border-ruby-7 bg-ruby-5 text-rubyA-11 hover:outline-rubyA-11',
+                originalEvent.isLive && 'border-rubyA-11',
+              ),
             originalEvent.color === 'crimson' &&
               cn(
-                'bg-crimson-5 text-crimsonA-11 hover:outline-crimsonA-11',
+                'border-crimson-7 bg-crimson-5 text-crimsonA-11 hover:outline-crimsonA-11',
                 originalEvent.isLive && 'border-crimsonA-11',
               ),
             originalEvent.color === 'pink' &&
-              cn('bg-pink-5 text-pinkA-11 hover:outline-pinkA-11', originalEvent.isLive && 'border-pinkA-11'),
+              cn(
+                'border-pink-7 bg-pink-5 text-pinkA-11 hover:outline-pinkA-11',
+                originalEvent.isLive && 'border-pinkA-11',
+              ),
             originalEvent.color === 'plum' &&
-              cn('bg-plum-5 text-plumA-11 hover:outline-plumA-11', originalEvent.isLive && 'border-plumA-11'),
+              cn(
+                'border-plum-7 bg-plum-5 text-plumA-11 hover:outline-plumA-11',
+                originalEvent.isLive && 'border-plumA-11',
+              ),
             originalEvent.color === 'purple' &&
-              cn('bg-purple-5 text-purpleA-11 hover:outline-purpleA-11', originalEvent.isLive && 'border-purpleA-11'),
+              cn(
+                'border-purple-7 bg-purple-5 text-purpleA-11 hover:outline-purpleA-11',
+                originalEvent.isLive && 'border-purpleA-11',
+              ),
             originalEvent.color === 'violet' &&
-              cn('bg-violet-5 text-violetA-11 hover:outline-violetA-11', originalEvent.isLive && 'border-violetA-11'),
+              cn(
+                'border-violet-7 bg-violet-5 text-violetA-11 hover:outline-violetA-11',
+                originalEvent.isLive && 'border-violetA-11',
+              ),
             originalEvent.color === 'iris' &&
-              cn('bg-iris-5 text-irisA-11 hover:outline-irisA-11', originalEvent.isLive && 'border-irisA-11'),
+              cn(
+                'border-iris-7 bg-iris-5 text-irisA-11 hover:outline-irisA-11',
+                originalEvent.isLive && 'border-irisA-11',
+              ),
             originalEvent.color === 'indigo' &&
-              cn('bg-indigo-5 text-indigoA-11 hover:outline-indigoA-11', originalEvent.isLive && 'border-indigoA-11'),
+              cn(
+                'border-indigo-7 bg-indigo-5 text-indigoA-11 hover:outline-indigoA-11',
+                originalEvent.isLive && 'border-indigoA-11',
+              ),
             originalEvent.color === 'blue' &&
-              cn('bg-blue-5 text-blueA-11 hover:outline-blueA-11', originalEvent.isLive && 'border-blueA-11'),
+              cn(
+                'border-blue-7 bg-blue-5 text-blueA-11 hover:outline-blueA-11',
+                originalEvent.isLive && 'border-blueA-11',
+              ),
             originalEvent.color === 'cyan' &&
-              cn('bg-cyan-5 text-cyanA-11 hover:outline-cyanA-11', originalEvent.isLive && 'border-cyanA-11'),
+              cn(
+                'border-cyan-7 bg-cyan-5 text-cyanA-11 hover:outline-cyanA-11',
+                originalEvent.isLive && 'border-cyanA-11',
+              ),
             originalEvent.color === 'teal' &&
-              cn('bg-teal-5 text-tealA-11 hover:outline-tealA-11', originalEvent.isLive && 'border-tealA-11'),
+              cn(
+                'border-teal-7 bg-teal-5 text-tealA-11 hover:outline-tealA-11',
+                originalEvent.isLive && 'border-tealA-11',
+              ),
             originalEvent.color === 'jade' &&
-              cn('bg-jade-5 text-jadeA-11 hover:outline-jadeA-11', originalEvent.isLive && 'border-jadeA-11'),
+              cn(
+                'border-jade-7 bg-jade-5 text-jadeA-11 hover:outline-jadeA-11',
+                originalEvent.isLive && 'border-jadeA-11',
+              ),
             originalEvent.color === 'green' &&
-              cn('bg-green-5 text-greenA-11 hover:outline-greenA-11', originalEvent.isLive && 'border-greenA-11'),
+              cn(
+                'border-green-7 bg-green-5 text-greenA-11 hover:outline-greenA-11',
+                originalEvent.isLive && 'border-greenA-11',
+              ),
             originalEvent.color === 'grass' &&
-              cn('bg-grass-5 text-grassA-11 hover:outline-grassA-11', originalEvent.isLive && 'border-grassA-11'),
+              cn(
+                'border-grass-7 bg-grass-5 text-grassA-11 hover:outline-grassA-11',
+                originalEvent.isLive && 'border-grassA-11',
+              ),
             originalEvent.color === 'lime' &&
-              cn('bg-lime-5 text-limeA-11 hover:outline-limeA-11', originalEvent.isLive && 'border-limeA-11'),
+              cn(
+                'border-lime-7 bg-lime-5 text-limeA-11 hover:outline-limeA-11',
+                originalEvent.isLive && 'border-limeA-11',
+              ),
             originalEvent.color === 'mint' &&
-              cn('bg-mint-5 text-mintA-11 hover:outline-mintA-11', originalEvent.isLive && 'border-mintA-11'),
+              cn(
+                'border-mint-7 bg-mint-5 text-mintA-11 hover:outline-mintA-11',
+                originalEvent.isLive && 'border-mintA-11',
+              ),
             originalEvent.color === 'sky' &&
-              cn('bg-sky-5 text-skyA-11 hover:outline-skyA-11', originalEvent.isLive && 'border-skyA-11'),
+              cn('border-sky-7 bg-sky-5 text-skyA-11 hover:outline-skyA-11', originalEvent.isLive && 'border-skyA-11'),
           )}
           style={getStylesFromEvent(dayEvent)}
           onMouseDown={onMouseDown}
