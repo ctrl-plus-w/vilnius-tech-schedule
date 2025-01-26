@@ -36,7 +36,6 @@ const SubjectsPage = ({ subjects }: SubjectsPageProps) => {
 
         for (const course of courses) {
           const date = getNextDay(course.interval.start, course.day);
-          console.log('x', course.interval.start, course.day, date);
 
           if (course.group !== selectedSubjects[id]) continue;
           const [startTime, endTime] = course.time.split('-');
