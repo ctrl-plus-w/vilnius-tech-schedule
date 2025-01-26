@@ -8,6 +8,8 @@ import CoursesTable from '@/feature/subjects/courses-table';
 import * as Sheet from '@/element/sheet';
 import { SheetRootProps } from '@/element/sheet';
 
+import { filterSubjectsGroups } from '@/util/subjects';
+
 import { Subject } from '@/type/subjects';
 
 export interface SelectCoursesSheetProps extends SheetRootProps {
@@ -28,11 +30,7 @@ const SelectCoursesSheet = ({
 
   const filteredSubjects = useMemo(() => {
     if (!onlyFu) return subjects;
-
-    return subjects.map(({ courses, ...subject }) => ({
-      ...subject,
-      courses: courses.filter(({ group }) => group.includes('fu')),
-    }));
+    return filterSubjectsGroups(subjects, 'fu');
   }, [subjects, onlyFu]);
 
   return (

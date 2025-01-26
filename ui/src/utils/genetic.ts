@@ -1,3 +1,5 @@
+import { Stat } from '@/feature/subjects/genetic-algorithm-buttons';
+
 import { count, getRandomElement, retrieveRandomElement, unique } from '@/util/array';
 import { standardVariation } from '@/util/math';
 import { getCoursesWithMergedWeeks, getGroups } from '@/util/subjects';
@@ -5,6 +7,7 @@ import { getCoursesWithMergedWeeks, getGroups } from '@/util/subjects';
 import { Day, Subject } from '@/type/subjects';
 
 export type SubjectWithSelectedGroup = Subject & { group: string };
+export type FitnessMode = 'days_with_lecture' | 'standard_variation' | 'days_with_lecture_*_standard_variation';
 
 const getRandomGroup = (subject: Subject) => {
   const groups = unique(getGroups(subject));
@@ -31,7 +34,7 @@ export class Schedule {
     return this.subjects.reduce((acc, { credits }) => acc + credits, 0);
   }
 
-  fitness(credits: number) {
+  fitness(credits: number, maxDays: number, fitnessMode: FitnessMode): number {
     if (this.getTotalCredits() !== credits) return 0;
 
     const days: Record<Day, boolean[]> = {
@@ -54,11 +57,17 @@ export class Schedule {
     }
 
     const daysWithLectures = Object.values(days).map((day) => day.some(Boolean));
+    if (count(daysWithLectures) > maxDays) return 0;
+
     const daysWithLecturesScore = 5 - count(daysWithLectures);
 
     const closenessScore = standardVariation(daysWithLectures.map((day, i) => (day ? i + 1 : 0)).filter((v) => v > 0));
 
-    return daysWithLecturesScore * closenessScore;
+    if (fitnessMode === 'standard_variation') return closenessScore;
+    if (fitnessMode === 'days_with_lecture') return daysWithLecturesScore;
+    if (fitnessMode === 'days_with_lecture_*_standard_variation') return daysWithLecturesScore * closenessScore;
+
+    return daysWithLecturesScore;
   }
 
   mutate() {
@@ -95,15 +104,19 @@ export class ScheduleGenetic {
 
   credits: number;
   population: number;
+  maxDays: number;
+  fitnessMode: FitnessMode;
 
   iterations: number;
 
-  constructor(courses: Subject[], population: number, credits: number) {
+  constructor(courses: Subject[], population: number, credits: number, maxDays: number, fitnessMode: FitnessMode) {
     this.subjects = courses;
     this.schedules = [];
 
     this.credits = credits;
     this.population = population;
+    this.maxDays = maxDays;
+    this.fitnessMode = fitnessMode;
 
     this.iterations = 0;
 
@@ -116,16 +129,22 @@ export class ScheduleGenetic {
     }
   }
 
+  fitness(schedule: Schedule) {
+    return schedule.fitness(this.credits, this.maxDays, this.fitnessMode);
+  }
+
   iterate(iterations: number) {
-    const logs: { iteration: number; fitnessMean: number }[] = [];
+    const logs: Stat[] = [];
 
     for (let i = 0; i < iterations; i++) {
       this.evolve();
 
-      const fitnessMean =
-        this.schedules.reduce((acc, schedule) => acc + schedule.fitness(this.credits), 0) / this.population;
+      const fitness = this.schedules.map((schedule) => this.fitness(schedule), 0);
 
-      logs.push({ iteration: i, fitnessMean });
+      const fitnessMean = fitness.reduce((acc, v) => acc + v, 0) / this.population;
+      const best = Math.max(...fitness);
+
+      logs.push({ iteration: i, fitnessMean, best });
     }
 
     return logs;
@@ -143,9 +162,7 @@ export class ScheduleGenetic {
   }
 
   getTop50() {
-    return this.schedules
-      .sort((a, b) => b.fitness(this.credits) - a.fitness(this.credits))
-      .slice(0, this.population / 2);
+    return this.schedules.sort((a, b) => this.fitness(b) - this.fitness(a)).slice(0, this.population / 2);
   }
 
   getBest() {

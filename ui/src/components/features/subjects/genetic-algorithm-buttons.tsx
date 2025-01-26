@@ -2,12 +2,13 @@ import { Dispatch, SetStateAction, useCallback } from 'react';
 
 import { GearIcon, RulerSquareIcon } from '@radix-ui/react-icons';
 import { Text, Button, Dialog, Flex, FlexProps } from '@radix-ui/themes';
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import useLocalStorageState from 'use-local-storage-state';
 
 import GeneticAlgorithmSettingsSheet from '@/feature/subjects/genetic-algorithm-settings-sheet';
 
-import { ScheduleGenetic } from '@/util/genetic';
+import { FitnessMode, ScheduleGenetic } from '@/util/genetic';
+import { filterSubjectsGroups } from '@/util/subjects';
 
 import { Subject } from '@/type/subjects';
 
@@ -16,13 +17,19 @@ export interface GeneticAlgorithmButtonsProps {
   setSelectedSubjects: Dispatch<SetStateAction<Record<string, string>>>;
 }
 
-type Stat = { iteration: number; fitnessMean: number };
+export type Stat = { iteration: number; fitnessMean: number; best: number };
 
 const GeneticAlgorithmButtons = ({
   subjects,
   setSelectedSubjects,
   ...props
 }: GeneticAlgorithmButtonsProps & FlexProps) => {
+  const [fitnessMode, setFitnessMode] = useLocalStorageState<FitnessMode>('genetic-algorithm-fitness-mode', {
+    defaultValue: 'days_with_lecture_*_standard_variation',
+  });
+
+  const [maxDays, setMaxDays] = useLocalStorageState('genetic-algorithm-max-days', { defaultValue: 5 });
+  const [groupFilter, setGroupFilter] = useLocalStorageState('genetic-algorithm-group-filter', { defaultValue: '' });
   const [population, setPopulation] = useLocalStorageState('genetic-algorithm-population', { defaultValue: 500 });
   const [credits, setCredits] = useLocalStorageState('genetic-algorithm-credits', { defaultValue: 30 });
   const [iterations, setIterations] = useLocalStorageState('genetic-algorithm-iterations', { defaultValue: 30 });
@@ -31,7 +38,9 @@ const GeneticAlgorithmButtons = ({
   const [stats, setStats] = useLocalStorageState<Stat[]>('genetic-algorithm-stats', { defaultValue: [] });
 
   const generate = useCallback(() => {
-    const genetic = new ScheduleGenetic(subjects, population, credits);
+    const filteredSubjects = filterSubjectsGroups(subjects, groupFilter);
+
+    const genetic = new ScheduleGenetic(filteredSubjects, population, credits, maxDays, fitnessMode);
 
     const _stats = genetic.iterate(iterations);
     setStats(_stats);
@@ -41,7 +50,7 @@ const GeneticAlgorithmButtons = ({
     const selectedSubjects = Object.fromEntries(best.subjects.map((subject) => [subject.id, subject.group]));
     setSelectedSubjects(selectedSubjects);
     setShowStatsDialog(true);
-  }, [population, credits, iterations]);
+  }, [population, credits, iterations, groupFilter, maxDays, fitnessMode]);
 
   return (
     <Flex gap="2" {...props}>
@@ -56,9 +65,12 @@ const GeneticAlgorithmButtons = ({
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={stats} margin={{ right: 48 }}>
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                <Line type="monotone" dataKey="fitnessMean" stroke="#8884d8" />
+                <Line type="monotone" dataKey="fitnessMean" name="Fitness mean" stroke="#8884d8" />
+                <Line type="monotone" dataKey="best" name="Best score" stroke="#82ca9d" />
                 <XAxis dataKey="iteration" />
                 <YAxis />
+                <Tooltip />
+                <Legend />
               </LineChart>
             </ResponsiveContainer>
           </Flex>
@@ -72,6 +84,15 @@ const GeneticAlgorithmButtons = ({
 
       <GeneticAlgorithmSettingsSheet
         {...{
+          fitnessMode,
+          setFitnessMode,
+
+          maxDays,
+          setMaxDays,
+
+          groupFilter,
+          setGroupFilter,
+
           population,
           setPopulation,
 

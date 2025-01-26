@@ -23,3 +23,12 @@ export const getCoursesWithMergedWeeks = <T extends Subject>(subject: T) => {
 
   return { ...subject, courses } as T;
 };
+
+export const filterSubjectsGroups = (subjects: Subject[], groupFilter: string) => {
+  if (groupFilter === '') return subjects;
+
+  return subjects.map(({ courses, ...subject }) => ({
+    ...subject,
+    courses: courses.filter(({ group }) => group.includes(groupFilter)),
+  }));
+};
