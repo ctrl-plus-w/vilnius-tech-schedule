@@ -54,11 +54,11 @@ export class Schedule {
     }
 
     const daysWithLectures = Object.values(days).map((day) => day.some(Boolean));
-    const daysWithLecturesScore = (5 - count(daysWithLectures)) * 10;
+    const daysWithLecturesScore = 5 - count(daysWithLectures);
 
     const closenessScore = standardVariation(daysWithLectures.map((day, i) => (day ? i + 1 : 0)).filter((v) => v > 0));
 
-    return daysWithLecturesScore + closenessScore;
+    return daysWithLecturesScore * closenessScore;
   }
 
   mutate() {
