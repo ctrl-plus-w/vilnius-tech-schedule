@@ -1,7 +1,8 @@
-import { Dispatch, SetStateAction, useCallback, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useCallback, useRef } from 'react';
 
 import { GearIcon } from '@radix-ui/react-icons';
 import { Button, Flex, FlexProps, Text } from '@radix-ui/themes';
+import useLocalStorageState from 'use-local-storage-state';
 
 import GeneticAlgorithmSettingsSheet from '@/feature/subjects/genetic-algorithm-settings-sheet';
 
@@ -19,9 +20,9 @@ const GeneticAlgorithmButtons = ({
   setSelectedSubjects,
   ...props
 }: GeneticAlgorithmButtonsProps & FlexProps) => {
-  const [population, setPopulation] = useState(500);
-  const [credits, setCredits] = useState(30);
-  const [iterations, setIterations] = useState(30);
+  const [population, setPopulation] = useLocalStorageState('genetic-algorithm-population', { defaultValue: 500 });
+  const [credits, setCredits] = useLocalStorageState('genetic-algorithm-credits', { defaultValue: 30 });
+  const [iterations, setIterations] = useLocalStorageState('genetic-algorithm-iterations', { defaultValue: 30 });
 
   const modalContainerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
