@@ -6,6 +6,7 @@ import { Button, Flex } from '@radix-ui/themes';
 import { setHours, setMinutes } from 'date-fns';
 import useLocalStorageState from 'use-local-storage-state';
 
+import GeneticAlgorithmButtons from '@/feature/subjects/genetic-algorithm-buttons';
 import SelectCoursesSheet from '@/feature/subjects/select-courses-sheet';
 
 import SubjectsSchedule from '@/module/subjects-schedule';
@@ -66,9 +67,13 @@ const SubjectsPage = ({ subjects }: SubjectsPageProps) => {
 
   return (
     <Flex direction="column" p="6" gap="3" align="start" className="h-screen w-screen">
-      <SelectCoursesSheet defaultOpen={true} {...{ subjects, selectedSubjects, setSelectedSubjects }}>
-        <Button>Select the courses</Button>
-      </SelectCoursesSheet>
+      <Flex width="100%" gap="2" justify="between">
+        <SelectCoursesSheet {...{ subjects, selectedSubjects, setSelectedSubjects }}>
+          <Button>Select the courses</Button>
+        </SelectCoursesSheet>
+
+        <GeneticAlgorithmButtons {...{ subjects, setSelectedSubjects }} />
+      </Flex>
 
       <SubjectsSchedule events={subjectsAsEvents} />
     </Flex>

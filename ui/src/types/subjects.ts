@@ -16,4 +16,5 @@ export interface Subject {
   name: string;
   id: string;
   courses: Course[];
+  credits: number;
 }
