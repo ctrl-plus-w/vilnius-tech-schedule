@@ -70,14 +70,11 @@ export class Schedule {
     return daysWithLecturesScore;
   }
 
-  mutate() {
-    const mutateSubjectChange = 0.005;
-    const mutateGroupChange = 0.1;
-
+  mutate(mutateSubjectChance: number, mutateGroupChance: number) {
     for (let i = 0; i < this.subjects.length; i++) {
-      if (Math.random() < mutateSubjectChange) {
+      if (Math.random() < mutateSubjectChance) {
         this.subjects[i] = getRandomSubject(this.subjects);
-      } else if (Math.random() < mutateGroupChange) {
+      } else if (Math.random() < mutateGroupChance) {
         const subject = this.subjects[i];
         this.subjects[i] = { ...subject, group: getRandomGroup(subject) };
       }
@@ -106,10 +103,20 @@ export class ScheduleGenetic {
   population: number;
   maxDays: number;
   fitnessMode: FitnessMode;
+  mutateSubjectChance: number;
+  mutateGroupChance: number;
 
   iterations: number;
 
-  constructor(courses: Subject[], population: number, credits: number, maxDays: number, fitnessMode: FitnessMode) {
+  constructor(
+    courses: Subject[],
+    population: number,
+    credits: number,
+    maxDays: number,
+    fitnessMode: FitnessMode,
+    mutateSubjectChance: number,
+    mutateGroupChance: number,
+  ) {
     this.subjects = courses;
     this.schedules = [];
 
@@ -117,6 +124,8 @@ export class ScheduleGenetic {
     this.population = population;
     this.maxDays = maxDays;
     this.fitnessMode = fitnessMode;
+    this.mutateSubjectChance = mutateSubjectChance;
+    this.mutateGroupChance = mutateGroupChance;
 
     this.iterations = 0;
 
@@ -154,7 +163,7 @@ export class ScheduleGenetic {
     const top50 = this.getTop50();
     const top50Copy = top50.map((schedule) => schedule.clone());
 
-    for (const schedule of top50Copy) schedule.mutate();
+    for (const schedule of top50Copy) schedule.mutate(this.mutateSubjectChance, this.mutateGroupChance);
 
     this.iterations++;
 

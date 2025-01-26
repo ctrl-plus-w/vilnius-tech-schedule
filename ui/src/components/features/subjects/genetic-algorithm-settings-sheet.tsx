@@ -1,12 +1,18 @@
 import { Dispatch, SetStateAction } from 'react';
 
-import { Code, Flex, Select, Slider, Text, TextField } from '@radix-ui/themes';
+import { Code, Flex, Heading, Select, Separator, Slider, Text, TextField } from '@radix-ui/themes';
 
 import * as Sheet from '@/element/sheet';
 
 import { FitnessMode } from '@/util/genetic';
 
 export interface GenerateScheduleSheetProps extends Sheet.SheetRootProps {
+  mutateSubjectChance: number;
+  setMutateSubjectChance: Dispatch<SetStateAction<number>>;
+
+  mutateGroupChance: number;
+  setMutateGroupChance: Dispatch<SetStateAction<number>>;
+
   fitnessMode: FitnessMode;
   setFitnessMode: Dispatch<SetStateAction<FitnessMode>>;
 
@@ -27,6 +33,12 @@ export interface GenerateScheduleSheetProps extends Sheet.SheetRootProps {
 }
 
 const GeneticAlgorithmSettingsSheet = ({
+  mutateSubjectChance,
+  setMutateSubjectChance,
+
+  mutateGroupChance,
+  setMutateGroupChance,
+
   fitnessMode,
   setFitnessMode,
 
@@ -56,6 +68,91 @@ const GeneticAlgorithmSettingsSheet = ({
         <Sheet.Description>Choose the genetic algorithm parameters and run it to see the result.</Sheet.Description>
 
         <Flex direction="column" mt="6" gap="2">
+          <Heading as="h2" size="4">
+            Genetic Algorithm Settings
+          </Heading>
+
+          <Separator size="4" />
+
+          <Flex direction="column" gap="1">
+            <Text weight="bold">Population</Text>
+            <Text color="gray">
+              In a genetic algorithm, the population is a set of candidate solutions (schedules), encoded as
+              chromosomes, which evolve through genetic operations to optimize the scheduling problem.
+            </Text>
+
+            <Flex align="center" gap="2">
+              <Slider
+                defaultValue={[population]}
+                onValueChange={([value]) => setPopulation(value)}
+                min={300}
+                max={10000}
+                step={100}
+              />
+              <Text>{population}</Text>
+            </Flex>
+          </Flex>
+
+          <Flex direction="column" gap="1">
+            <Text weight="bold">Iterations</Text>
+            <Text color="gray">
+              In a genetic algorithm, iterations represent the cycles of population evolution, where solutions are
+              selected, reproduced, and modified through genetic operators to improve overall fitness over successive
+              generations.
+            </Text>
+
+            <Flex align="center" gap="2">
+              <Slider
+                defaultValue={[iterations]}
+                onValueChange={([value]) => setIterations(value)}
+                min={10}
+                max={1000}
+                step={10}
+              />
+              <Text>{iterations}</Text>
+            </Flex>
+          </Flex>
+
+          <Flex gap="2">
+            <Flex direction="column" gap="1" width="100%">
+              <Text weight="bold">Mutate subject chance</Text>
+              <Text color="gray">The chance rate to mutate a subject.</Text>
+
+              <Flex align="center" gap="2">
+                <Slider
+                  defaultValue={[mutateSubjectChance]}
+                  onValueChange={([value]) => setMutateSubjectChance(value)}
+                  min={0}
+                  max={1}
+                  step={0.005}
+                />
+                <Text>{(mutateSubjectChance * 100).toFixed(1)}%</Text>
+              </Flex>
+            </Flex>
+
+            <Flex direction="column" gap="1" width="100%">
+              <Text weight="bold">Mutate group chance</Text>
+              <Text color="gray">The chance rate to mutate a subject group.</Text>
+
+              <Flex align="center" gap="2">
+                <Slider
+                  defaultValue={[mutateGroupChance]}
+                  onValueChange={([value]) => setMutateGroupChance(value)}
+                  min={0}
+                  max={1}
+                  step={0.005}
+                />
+                <Text>{(mutateGroupChance * 100).toFixed(1)}%</Text>
+              </Flex>
+            </Flex>
+          </Flex>
+
+          <Heading as="h2" size="4" mt="6">
+            Filtering & Fine-tuning Settings
+          </Heading>
+
+          <Separator size="4" />
+
           <Flex direction="column" gap="1">
             <Text weight="bold">Group filter</Text>
             <Text color="gray">
@@ -114,44 +211,11 @@ const GeneticAlgorithmSettingsSheet = ({
             </Flex>
           </Flex>
 
-          <Flex direction="column" gap="1">
-            <Text weight="bold">Population</Text>
-            <Text color="gray">
-              In a genetic algorithm, the population is a set of candidate solutions (schedules), encoded as
-              chromosomes, which evolve through genetic operations to optimize the scheduling problem.
-            </Text>
+          <Heading as="h2" size="4" mt="6">
+            Other Settings
+          </Heading>
 
-            <Flex align="center" gap="2">
-              <Slider
-                defaultValue={[population]}
-                onValueChange={([value]) => setPopulation(value)}
-                min={300}
-                max={10000}
-                step={100}
-              />
-              <Text>{population}</Text>
-            </Flex>
-          </Flex>
-
-          <Flex direction="column" gap="1">
-            <Text weight="bold">Iterations</Text>
-            <Text color="gray">
-              In a genetic algorithm, iterations represent the cycles of population evolution, where solutions are
-              selected, reproduced, and modified through genetic operators to improve overall fitness over successive
-              generations.
-            </Text>
-
-            <Flex align="center" gap="2">
-              <Slider
-                defaultValue={[iterations]}
-                onValueChange={([value]) => setIterations(value)}
-                min={10}
-                max={1000}
-                step={10}
-              />
-              <Text>{iterations}</Text>
-            </Flex>
-          </Flex>
+          <Separator size="4" />
 
           <Flex direction="column" gap="1">
             <Text weight="bold">Credits</Text>

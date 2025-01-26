@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useCallback } from 'react';
 
 import { GearIcon, RulerSquareIcon } from '@radix-ui/react-icons';
-import { Text, Button, Dialog, Flex, FlexProps } from '@radix-ui/themes';
+import { Button, Dialog, Flex, FlexProps, Text } from '@radix-ui/themes';
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import useLocalStorageState from 'use-local-storage-state';
 
@@ -34,13 +34,29 @@ const GeneticAlgorithmButtons = ({
   const [credits, setCredits] = useLocalStorageState('genetic-algorithm-credits', { defaultValue: 30 });
   const [iterations, setIterations] = useLocalStorageState('genetic-algorithm-iterations', { defaultValue: 30 });
 
+  const [mutateSubjectChance, setMutateSubjectChance] = useLocalStorageState(
+    'genetic-algorithm-mutate-subject-chance',
+    { defaultValue: 0.05 },
+  );
+  const [mutateGroupChance, setMutateGroupChance] = useLocalStorageState('genetic-algorithm-mutate-group-chance', {
+    defaultValue: 0.1,
+  });
+
   const [showStatsDialog, setShowStatsDialog] = useLocalStorageState('show-stats-dialog', { defaultValue: false });
   const [stats, setStats] = useLocalStorageState<Stat[]>('genetic-algorithm-stats', { defaultValue: [] });
 
   const generate = useCallback(() => {
     const filteredSubjects = filterSubjectsGroups(subjects, groupFilter);
 
-    const genetic = new ScheduleGenetic(filteredSubjects, population, credits, maxDays, fitnessMode);
+    const genetic = new ScheduleGenetic(
+      filteredSubjects,
+      population,
+      credits,
+      maxDays,
+      fitnessMode,
+      mutateSubjectChance,
+      mutateGroupChance,
+    );
 
     const _stats = genetic.iterate(iterations);
     setStats(_stats);
@@ -50,7 +66,7 @@ const GeneticAlgorithmButtons = ({
     const selectedSubjects = Object.fromEntries(best.subjects.map((subject) => [subject.id, subject.group]));
     setSelectedSubjects(selectedSubjects);
     setShowStatsDialog(true);
-  }, [population, credits, iterations, groupFilter, maxDays, fitnessMode]);
+  }, [population, credits, iterations, groupFilter, maxDays, fitnessMode, mutateSubjectChance, mutateGroupChance]);
 
   return (
     <Flex gap="2" {...props}>
@@ -84,6 +100,12 @@ const GeneticAlgorithmButtons = ({
 
       <GeneticAlgorithmSettingsSheet
         {...{
+          mutateSubjectChance,
+          setMutateSubjectChance,
+
+          mutateGroupChance,
+          setMutateGroupChance,
+
           fitnessMode,
           setFitnessMode,
 
