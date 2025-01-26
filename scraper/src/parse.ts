@@ -6,6 +6,8 @@ const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] as const;
 export type Day = (typeof days)[number];
 
 export interface Course {
+  interval: { start: string; end: string };
+  day: Day;
   lecture: number;
   group: string;
   time: string;
@@ -17,7 +19,7 @@ export interface Course {
 export interface Subject {
   name: string;
   id: string;
-  courseDays: Record<string, Partial<Record<Day, Course[]>>>;
+  courses: Course[];
 }
 
 export const parseSubjectCourses = (html: string, subjectId: string) => {
@@ -31,10 +33,10 @@ export const parseSubjectCourses = (html: string, subjectId: string) => {
   const subject: Subject = {
     name: '',
     id: subjectId,
-    courseDays: {},
+    courses: [],
   };
 
-  let intervalStr: string | undefined;
+  let interval: { start: string; end: string } | undefined;
   let day: Day | undefined;
 
   for (let i = 0; i < children.length; i++) {
@@ -46,7 +48,9 @@ export const parseSubjectCourses = (html: string, subjectId: string) => {
     }
 
     if (child.tagName === 'H3') {
-      intervalStr = child.text.trim();
+      const content = child.text.trim();
+      const [start, end] = content.split(' — ');
+      interval = { start, end: end ?? start };
       continue;
     }
 
@@ -61,7 +65,7 @@ export const parseSubjectCourses = (html: string, subjectId: string) => {
     }
 
     if (child.id === 'my-results-grid') {
-      if (!intervalStr || !day) {
+      if (!interval || !day) {
         logger.warn('Found a table but the interval or day is not set');
         continue;
       }
@@ -108,19 +112,18 @@ export const parseSubjectCourses = (html: string, subjectId: string) => {
           continue;
         }
 
-        const course: Course = {
+        if (!interval || !day) continue;
+
+        subject.courses.push({
+          interval: interval,
+          day: day,
           lecture: Number(lecture.text.trim()),
           group: group.text.trim(),
           time: time.text.trim(),
           week: week.text.trim(),
           auditorium: auditorium.text.trim(),
           type: type.text.trim(),
-        };
-
-        if (!(intervalStr in subject.courseDays)) subject.courseDays[intervalStr] = {};
-
-        if (!(day in subject.courseDays[intervalStr])) subject.courseDays[intervalStr][day] = [course];
-        else subject.courseDays[intervalStr][day]?.push(course);
+        });
       }
     }
   }

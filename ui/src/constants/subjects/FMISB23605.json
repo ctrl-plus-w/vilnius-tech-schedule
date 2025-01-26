@@ -1,146 +1,188 @@
 {
   "name": "Financial Information Systems and their Integration 2024-2025 AY spring semester lecture schedule",
   "id": "FMISB23605",
-  "courseDays": {
-    "2025-02-03 — 2025-04-26": {
-      "monday": [
-        {
-          "lecture": 1,
-          "group": "FINfu-21",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
-          "type": "Lectures"
-        },
-        {
-          "lecture": 2,
-          "group": "FINfu-21",
-          "time": "10:20-11:55",
-          "week": "-",
-          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
-          "type": "Laboratory work (laboratory works)"
-        },
-        {
-          "lecture": 3,
-          "group": "FINfu-21",
-          "time": "12:10-13:45",
-          "week": "1",
-          "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
-          "type": "Practical exercises (practical work)"
-        }
-      ]
+  "courses": [
+    {
+      "interval": {
+        "start": "2025-02-03",
+        "end": "2025-04-26"
+      },
+      "day": "monday",
+      "lecture": 1,
+      "group": "FINfu-21",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+      "type": "Lectures"
     },
-    "2025-02-13": {
-      "thursday": [
-        {
-          "lecture": 1,
-          "group": "ITnt-23",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "-",
-          "type": "Lectures (VĮ)"
-        },
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Lectures (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-02-03",
+        "end": "2025-04-26"
+      },
+      "day": "monday",
+      "lecture": 2,
+      "group": "FINfu-21",
+      "time": "10:20-11:55",
+      "week": "-",
+      "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+      "type": "Laboratory work (laboratory works)"
     },
-    "2025-02-27": {
-      "thursday": [
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Laboratory work (laboratory works) (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-02-03",
+        "end": "2025-04-26"
+      },
+      "day": "monday",
+      "lecture": 3,
+      "group": "FINfu-21",
+      "time": "12:10-13:45",
+      "week": "1",
+      "auditorium": "S5(SRK-II) 203Auditorium S5(SRK-II) 203: Saulėtekio al. 11 - Saulėtekio Campus - Second building 203 auditorium",
+      "type": "Practical exercises (practical work)"
     },
-    "2025-03-13": {
-      "thursday": [
-        {
-          "lecture": 1,
-          "group": "ITnt-23",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "-",
-          "type": "Lectures (VĮ)"
-        },
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Lectures (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-02-13",
+        "end": "2025-02-13"
+      },
+      "day": "thursday",
+      "lecture": 1,
+      "group": "ITnt-23",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "-",
+      "type": "Lectures (VĮ)"
     },
-    "2025-03-27": {
-      "thursday": [
-        {
-          "lecture": 1,
-          "group": "ITnt-23",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "-",
-          "type": "Laboratory work (laboratory works) (VĮ)"
-        },
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Laboratory work (laboratory works) (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-02-13",
+        "end": "2025-02-13"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Lectures (VK)"
     },
-    "2025-04-10": {
-      "thursday": [
-        {
-          "lecture": 1,
-          "group": "ITnt-23",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "-",
-          "type": "Lectures (VĮ)"
-        },
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Lectures (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-02-27",
+        "end": "2025-02-27"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Laboratory work (laboratory works) (VK)"
     },
-    "2025-04-24": {
-      "thursday": [
-        {
-          "lecture": 1,
-          "group": "ITnt-23",
-          "time": "08:30-10:05",
-          "week": "-",
-          "auditorium": "-",
-          "type": "Laboratory work (laboratory works) (VĮ)"
-        },
-        {
-          "lecture": 6,
-          "group": "ITnt-23",
-          "time": "18:10-19:45",
-          "week": "-",
-          "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
-          "type": "Laboratory work (laboratory works) (VK)"
-        }
-      ]
+    {
+      "interval": {
+        "start": "2025-03-13",
+        "end": "2025-03-13"
+      },
+      "day": "thursday",
+      "lecture": 1,
+      "group": "ITnt-23",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "-",
+      "type": "Lectures (VĮ)"
+    },
+    {
+      "interval": {
+        "start": "2025-03-13",
+        "end": "2025-03-13"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Lectures (VK)"
+    },
+    {
+      "interval": {
+        "start": "2025-03-27",
+        "end": "2025-03-27"
+      },
+      "day": "thursday",
+      "lecture": 1,
+      "group": "ITnt-23",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "-",
+      "type": "Laboratory work (laboratory works) (VĮ)"
+    },
+    {
+      "interval": {
+        "start": "2025-03-27",
+        "end": "2025-03-27"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Laboratory work (laboratory works) (VK)"
+    },
+    {
+      "interval": {
+        "start": "2025-04-10",
+        "end": "2025-04-10"
+      },
+      "day": "thursday",
+      "lecture": 1,
+      "group": "ITnt-23",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "-",
+      "type": "Lectures (VĮ)"
+    },
+    {
+      "interval": {
+        "start": "2025-04-10",
+        "end": "2025-04-10"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Lectures (VK)"
+    },
+    {
+      "interval": {
+        "start": "2025-04-24",
+        "end": "2025-04-24"
+      },
+      "day": "thursday",
+      "lecture": 1,
+      "group": "ITnt-23",
+      "time": "08:30-10:05",
+      "week": "-",
+      "auditorium": "-",
+      "type": "Laboratory work (laboratory works) (VĮ)"
+    },
+    {
+      "interval": {
+        "start": "2025-04-24",
+        "end": "2025-04-24"
+      },
+      "day": "thursday",
+      "lecture": 6,
+      "group": "ITnt-23",
+      "time": "18:10-19:45",
+      "week": "-",
+      "auditorium": "S6(SRL-I) 530-2Auditorium S6(SRL-I) 530-2: Saulėtekio al. 11 - Saulėtekio Campus - First laboratory building 530-2 auditorium",
+      "type": "Laboratory work (laboratory works) (VK)"
     }
-  }
+  ]
 }

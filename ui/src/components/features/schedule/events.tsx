@@ -32,12 +32,9 @@ export const Events = () => {
       }))
       .filter((event) => {
         if (intervalEvents.some(({ id }) => id === event.id)) return false;
-        if (!event.recurring?.from || !event.recurring?.to) return false;
+        if (!event.recurring) return false;
 
-        return (
-          isWithinInterval(event.from, { start: event.recurring.from, end: event.recurring.to }) &&
-          isWithinInterval(event.from, interval)
-        );
+        return isWithinInterval(event.from, event.recurring) && isWithinInterval(event.from, interval);
       });
   }, [intervalEvents, events, interval]);
 

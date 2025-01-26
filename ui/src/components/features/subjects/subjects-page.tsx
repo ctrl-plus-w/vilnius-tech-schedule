@@ -15,7 +15,7 @@ import useSubjectsColor from '@/hook/use-subjects-color';
 import { getNextDay } from '@/util/date';
 
 import { TScheduleEvent } from '@/type/schedule';
-import { Day, Subject } from '@/type/subjects';
+import { Subject } from '@/type/subjects';
 
 export interface SubjectsPageProps {
   subjects: Subject[];
@@ -31,35 +31,33 @@ const SubjectsPage = ({ subjects }: SubjectsPageProps) => {
   const subjectsAsEvents = useMemo(() => {
     return subjects
       .filter(({ id }) => id in selectedSubjects)
-      .map(({ id, name, courseDays }) => {
+      .map(({ id, name, courses }) => {
         const events: TScheduleEvent[] = [];
 
-        for (const interval in courseDays) {
-          const [intervalStart, intervalEnd] = interval.split(' — ').map((d) => new Date(d));
+        for (const course of courses) {
+          const date = getNextDay(course.interval.start, course.day);
+          console.log('x', course.interval.start, course.day, date);
 
-          for (const [day, courses] of Object.entries(courseDays[interval])) {
-            const date = getNextDay(intervalStart, day as Day);
+          if (course.group !== selectedSubjects[id]) continue;
+          const [startTime, endTime] = course.time.split('-');
 
-            for (const course of courses) {
-              if (course.group !== selectedSubjects[id]) continue;
-              const [startTime, endTime] = course.time.split('-');
+          const [startHours, startMinutes] = startTime.split(':').map((v) => parseInt(v));
+          const [endHours, endMinutes] = endTime.split(':').map((v) => parseInt(v));
 
-              const [startHours, startMinutes] = startTime.split(':').map((v) => parseInt(v));
-              const [endHours, endMinutes] = endTime.split(':').map((v) => parseInt(v));
+          const eventId =
+            `${course.interval.start}-${course.interval.end}-${course.day}-${course.lecture}-${course.type}-${course.group}-${course.time}`
+              .toLowerCase()
+              .replaceAll(' ', '-');
 
-              events.push({
-                id: `${interval}-${day}-${course.lecture}-${course.type}-${course.group}-${course.time}`
-                  .toLowerCase()
-                  .replaceAll(' ', '-'),
-                from: setHours(setMinutes(date, startMinutes), startHours),
-                to: setHours(setMinutes(date, endMinutes), endHours),
-                color: getColor(id) ?? 'gray',
-                name: `${name.split('AY')[0].trim()} (${course.group})`,
-                isCurrent: false,
-                recurring: { from: intervalStart, to: intervalEnd },
-              });
-            }
-          }
+          events.push({
+            id: eventId,
+            from: setHours(setMinutes(date, startMinutes), startHours),
+            to: setHours(setMinutes(date, endMinutes), endHours),
+            color: getColor(id) ?? 'gray',
+            name: `${name.split('AY')[0].trim()} (${course.group})`,
+            isCurrent: false,
+            recurring: course.interval,
+          });
         }
 
         return events;

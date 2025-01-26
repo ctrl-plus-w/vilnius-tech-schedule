@@ -8,8 +8,6 @@ import CoursesTable from '@/feature/subjects/courses-table';
 import * as Sheet from '@/element/sheet';
 import { SheetRootProps } from '@/element/sheet';
 
-import { mapValues } from '@/util/object';
-
 import { Subject } from '@/type/subjects';
 
 export interface SelectCoursesSheetProps extends SheetRootProps {
@@ -31,11 +29,9 @@ const SelectCoursesSheet = ({
   const filteredSubjects = useMemo(() => {
     if (!onlyFu) return subjects;
 
-    return subjects.map((subject) => ({
+    return subjects.map(({ courses, ...subject }) => ({
       ...subject,
-      courseDays: mapValues(subject.courseDays, (interval) =>
-        mapValues(interval, (course) => course.filter(({ group }) => group.includes('fu'))),
-      ),
+      courses: courses.filter(({ group }) => group.includes('fu')),
     }));
   }, [subjects, onlyFu]);
 

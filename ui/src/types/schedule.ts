@@ -1,3 +1,5 @@
+import { Interval } from 'date-fns';
+
 import { Colors } from '@/util/colors';
 
 export enum IntervalKind {
@@ -17,7 +19,7 @@ export interface TScheduleEvent extends DateRange {
   isCurrent: boolean;
   color: Colors;
   isLive?: boolean;
-  recurring?: DateRange;
+  recurring?: Interval;
 }
 
 export enum EventKind {

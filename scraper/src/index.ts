@@ -68,7 +68,7 @@ export const saveSubject = (dir: string, subject: Subject) => {
   if (page.url().startsWith('https://fs.vilniustech.lt/adfs/ls')) await authenticate(page, ENV.USER_ID, ENV.PASSWORD);
   if (page.url() !== URL) await page.goto(URL, { waitUntil: 'networkidle2' });
 
-  for (const subjectId of SUBJECTS) {
+  for (const subjectId of Array.from(new Set(SUBJECTS))) {
     await page.waitForFunction(() => {
       // @ts-ignore
       const element = document.querySelector('#resultsHorizontalTab-overlay');
