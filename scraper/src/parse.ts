@@ -1,6 +1,7 @@
 import parse from 'node-html-parser';
 
 import logger from './instances/logger';
+import { StudyModule } from './constants/study-programs';
 
 const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] as const;
 export type Day = (typeof days)[number];
@@ -20,9 +21,10 @@ export interface Subject {
   name: string;
   id: string;
   courses: Course[];
+  credits: number;
 }
 
-export const parseSubjectCourses = (html: string, subjectId: string) => {
+export const parseSubjectCourses = (html: string, module: StudyModule) => {
   const root = parse(html).querySelector('div');
   if (!root) throw new Error('Failed to find the root element');
 
@@ -32,8 +34,9 @@ export const parseSubjectCourses = (html: string, subjectId: string) => {
 
   const subject: Subject = {
     name: '',
-    id: subjectId,
+    id: module.id,
     courses: [],
+    credits: module.credits,
   };
 
   let interval: { start: string; end: string } | undefined;
