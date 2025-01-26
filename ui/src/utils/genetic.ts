@@ -117,7 +117,18 @@ export class ScheduleGenetic {
   }
 
   iterate(iterations: number) {
-    for (let i = 0; i < iterations; i++) this.evolve();
+    const logs: { iteration: number; fitnessMean: number }[] = [];
+
+    for (let i = 0; i < iterations; i++) {
+      this.evolve();
+
+      const fitnessMean =
+        this.schedules.reduce((acc, schedule) => acc + schedule.fitness(this.credits), 0) / this.population;
+
+      logs.push({ iteration: i, fitnessMean });
+    }
+
+    return logs;
   }
 
   evolve() {
