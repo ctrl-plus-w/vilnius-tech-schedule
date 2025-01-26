@@ -117,7 +117,7 @@ export const getNthDayInInterval = (date: Date, interval: Interval) => {
 };
 
 export const getNextDay = (date: string | number | Date, targetDay: Day): Date => {
-  const currentDayIndex = getDay(date);
+  const currentDayIndex = getDay(date) - 1;
   const targetDayIndex = days.indexOf(targetDay);
 
   // Calculate days to add to reach the next occurrence of the target day
