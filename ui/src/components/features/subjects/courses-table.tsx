@@ -4,6 +4,7 @@ import { Badge, Code, Flex, Table, Text } from '@radix-ui/themes';
 
 import useSubjectsColor from '@/hook/use-subjects-color';
 
+import { cn } from '@/util/style';
 import { getGroups } from '@/util/subjects';
 
 import { Subject } from '@/type/subjects';
@@ -66,6 +67,7 @@ const CoursesTable = ({ subjects, selectedSubjects, setSelectedSubjects }: Cours
                     <Badge
                       key={group}
                       color={selectedSubjects[subject.id] === group ? getColor(subject.id) ?? 'purple' : 'gray'}
+                      className={cn(selectedSubjects[subject.id] !== group && 'opacity-75')}
                       asChild
                     >
                       <button onClick={() => toggleGroup(subject, group)}>{group}</button>
