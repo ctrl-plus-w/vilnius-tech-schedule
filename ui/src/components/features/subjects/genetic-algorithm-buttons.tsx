@@ -8,7 +8,9 @@ import useLocalStorageState from 'use-local-storage-state';
 import GeneticAlgorithmSettingsSheet from '@/feature/subjects/genetic-algorithm-settings-sheet';
 
 import { FitnessMode, ScheduleGenetic } from '@/util/genetic';
-import { filterSubjectsGroups } from '@/util/subjects';
+import { filterSubjectsByStudyProgramFilter, filterSubjectsGroups } from '@/util/subjects';
+
+import STUDY_PROGRAMS from '@/constant/study-programs';
 
 import { Subject } from '@/type/subjects';
 
@@ -26,6 +28,13 @@ const GeneticAlgorithmButtons = ({
 }: GeneticAlgorithmButtonsProps & FlexProps) => {
   const [fitnessMode, setFitnessMode] = useLocalStorageState<FitnessMode>('genetic-algorithm-fitness-mode', {
     defaultValue: 'days_with_lecture_*_standard_variation',
+  });
+  const [selectedStudyProgramsSubjects, setSelectedStudyProgramsSubjects] = useLocalStorageState<
+    Record<string, string[]>
+  >('genetic-algorithm-selected-study-programs-subjects', {
+    defaultValue: Object.fromEntries(
+      STUDY_PROGRAMS.map(({ name, specializations }) => [name, specializations.map(({ name }) => name)]),
+    ),
   });
 
   const [maxDays, setMaxDays] = useLocalStorageState('genetic-algorithm-max-days', { defaultValue: 5 });
@@ -46,7 +55,10 @@ const GeneticAlgorithmButtons = ({
   const [stats, setStats] = useLocalStorageState<Stat[]>('genetic-algorithm-stats', { defaultValue: [] });
 
   const generate = useCallback(() => {
-    const filteredSubjects = filterSubjectsGroups(subjects, groupFilter);
+    const filteredSubjects = filterSubjectsGroups(
+      filterSubjectsByStudyProgramFilter(selectedStudyProgramsSubjects, subjects),
+      groupFilter,
+    );
 
     const genetic = new ScheduleGenetic(
       filteredSubjects,
@@ -100,6 +112,9 @@ const GeneticAlgorithmButtons = ({
 
       <GeneticAlgorithmSettingsSheet
         {...{
+          selectedStudyProgramsSubjects,
+          setSelectedStudyProgramsSubjects,
+
           mutateSubjectChance,
           setMutateSubjectChance,
 

@@ -1,3 +1,5 @@
+import STUDY_PROGRAMS from '@/constant/study-programs';
+
 import { Subject } from '@/type/subjects';
 
 export const getGroups = (subject: Subject) => {
@@ -22,6 +24,22 @@ export const getCoursesWithMergedWeeks = <T extends Subject>(subject: T) => {
   });
 
   return { ...subject, courses } as T;
+};
+
+export const filterSubjectsByStudyProgramFilter = (filter: Record<string, string[]>, subjects: Subject[]) => {
+  const subjectsId = Object.keys(filter)
+    .map((studyProgramName) => {
+      const studyProgram = STUDY_PROGRAMS.find(({ name }) => name === studyProgramName);
+      if (!studyProgram) return [];
+
+      const specializations = studyProgram.specializations.filter(({ name }) =>
+        filter[studyProgramName].includes(name),
+      );
+      return specializations.map(({ modules }) => modules.map(({ id }) => id)).flat();
+    })
+    .flat();
+
+  return subjects.filter(({ id }) => subjectsId.includes(id));
 };
 
 export const filterSubjectsGroups = (subjects: Subject[], groupFilter: string) => {
