@@ -41,11 +41,11 @@ const GeneticAlgorithmButtons = ({
   const [groupFilter, setGroupFilter] = useLocalStorageState('genetic-algorithm-group-filter', { defaultValue: '' });
   const [population, setPopulation] = useLocalStorageState('genetic-algorithm-population', { defaultValue: 500 });
   const [credits, setCredits] = useLocalStorageState('genetic-algorithm-credits', { defaultValue: 30 });
-  const [iterations, setIterations] = useLocalStorageState('genetic-algorithm-iterations', { defaultValue: 30 });
+  const [iterations, setIterations] = useLocalStorageState('genetic-algorithm-iterations', { defaultValue: 20 });
 
   const [mutateSubjectChance, setMutateSubjectChance] = useLocalStorageState(
     'genetic-algorithm-mutate-subject-chance',
-    { defaultValue: 0.05 },
+    { defaultValue: 0.3 },
   );
   const [mutateGroupChance, setMutateGroupChance] = useLocalStorageState('genetic-algorithm-mutate-group-chance', {
     defaultValue: 0.1,
