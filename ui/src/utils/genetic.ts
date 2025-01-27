@@ -22,12 +22,15 @@ const getRandomSubject = (subjects: Subject[]) => {
 export class Schedule {
   subjects: SubjectWithSelectedGroup[];
 
+  cachedFitness: number;
+
   constructor(subjects: SubjectWithSelectedGroup[] = []) {
     this.subjects = subjects;
+    this.cachedFitness = -1;
   }
 
   clone() {
-    return new Schedule([...this.subjects]);
+    return new Schedule([...this.subjects.map((subject) => structuredClone(subject))]);
   }
 
   getTotalCredits() {
@@ -61,7 +64,10 @@ export class Schedule {
 
     const daysWithLecturesScore = 5 - count(daysWithLectures);
 
-    const closenessScore = standardVariation(daysWithLectures.map((day, i) => (day ? i + 1 : 0)).filter((v) => v > 0));
+    const daysWithLecturesStandardVariation = standardVariation(
+      daysWithLectures.map((day, i) => (day ? i + 1 : 0)).filter((v) => v > 0),
+    );
+    const closenessScore = 3 - daysWithLecturesStandardVariation;
 
     if (fitnessMode === 'standard_variation') return closenessScore;
     if (fitnessMode === 'days_with_lecture') return daysWithLecturesScore;
@@ -148,7 +154,7 @@ export class ScheduleGenetic {
     for (let i = 0; i < iterations; i++) {
       this.evolve();
 
-      const fitness = this.schedules.map((schedule) => this.fitness(schedule), 0);
+      const fitness = this.schedules.map((schedule) => schedule.cachedFitness);
 
       const fitnessMean = fitness.reduce((acc, v) => acc + v, 0) / this.population;
       const best = Math.max(...fitness);
@@ -171,7 +177,8 @@ export class ScheduleGenetic {
   }
 
   getTop50() {
-    return this.schedules.sort((a, b) => this.fitness(b) - this.fitness(a)).slice(0, this.population / 2);
+    for (const schedule of this.schedules) schedule.cachedFitness = this.fitness(schedule);
+    return this.schedules.toSorted((a, b) => b.cachedFitness - a.cachedFitness).slice(0, this.population / 2);
   }
 
   getBest() {
