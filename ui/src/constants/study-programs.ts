@@ -67,7 +67,6 @@ export const STUDY_PROGRAMS = [
           { id: 'FMGSB23402', name: 'Artificial Intelligence in Computer Games', credits: 6, evaluationMode: 'E' },
           { id: 'FMGSB24601', name: 'Audio Technologies', credits: 6, evaluationMode: 'E' },
           { id: 'FMGSB16613', name: 'Web 3D Graphics', credits: 3, evaluationMode: 'E1' },
-          { id: 'FMGSB23402', name: 'Artificial Intelligence in Computer Games', credits: 6, evaluationMode: 'E' },
           { id: 'FMGSB24601', name: 'Audio Technologies', credits: 6, evaluationMode: 'E' },
           { id: 'VVTEB16401', name: 'Copyright Law', credits: 3, evaluationMode: 'E1' },
         ],
