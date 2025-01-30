@@ -88,7 +88,7 @@ export class Schedule {
   }
 
   static generate(subjects: Subject[], credits: number) {
-    const remainingSubjects = [...subjects];
+    const remainingSubjects = structuredClone(subjects);
     const schedule = new Schedule();
 
     while (schedule.getTotalCredits() < credits) {
@@ -111,6 +111,7 @@ export class ScheduleGenetic {
   fitnessMode: FitnessMode;
   mutateSubjectChance: number;
   mutateGroupChance: number;
+  generateEveryIteration: boolean;
 
   iterations: number;
 
@@ -122,6 +123,7 @@ export class ScheduleGenetic {
     fitnessMode: FitnessMode,
     mutateSubjectChance: number,
     mutateGroupChance: number,
+    generateEveryIteration: boolean,
   ) {
     this.subjects = courses;
     this.schedules = [];
@@ -132,16 +134,24 @@ export class ScheduleGenetic {
     this.fitnessMode = fitnessMode;
     this.mutateSubjectChance = mutateSubjectChance;
     this.mutateGroupChance = mutateGroupChance;
+    this.generateEveryIteration = generateEveryIteration;
 
     this.iterations = 0;
 
     this.seed(population);
   }
 
-  seed(population: number) {
-    for (let i = 0; i < population; i++) {
-      this.schedules.push(Schedule.generate(this.subjects, this.credits));
+  generate(count: number) {
+    const generated: Schedule[] = [];
+
+    for (let i = 0; i < count; i++) {
+      generated.push(Schedule.generate(this.subjects, this.credits));
     }
+
+    return generated;
+  }
+  seed(population: number) {
+    this.schedules = this.generate(population);
   }
 
   fitness(schedule: Schedule) {
@@ -156,10 +166,10 @@ export class ScheduleGenetic {
 
       const fitness = this.schedules.map((schedule) => schedule.cachedFitness);
 
-      const fitnessMean = fitness.reduce((acc, v) => acc + v, 0) / this.population;
+      const fitnessMean = fitness.reduce((acc, v) => acc + v, 0) / fitness.length;
       const best = Math.max(...fitness);
 
-      logs.push({ iteration: i, fitnessMean, best });
+      logs.push({ iteration: i, fitnessMean, best, population: fitness.length });
     }
 
     return logs;
@@ -173,7 +183,11 @@ export class ScheduleGenetic {
 
     this.iterations++;
 
-    this.schedules = [...top50, ...top50Copy];
+    const res: Schedule[] = [...top50, ...top50Copy];
+
+    if (this.generateEveryIteration) res.push(...this.generate(Math.round(this.population / 2)));
+
+    this.schedules = res;
   }
 
   getTop50() {

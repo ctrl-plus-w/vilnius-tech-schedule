@@ -8,6 +8,7 @@ import {
   Select,
   Separator,
   Slider,
+  Switch,
   Table,
   Tabs,
   Text,
@@ -23,6 +24,9 @@ import STUDY_PROGRAMS, { ProgramSpecialization, StudyProgram } from '@/constant/
 export interface GenerateScheduleSheetProps extends Sheet.SheetRootProps {
   selectedStudyProgramsSubjects: Record<string, string[]>;
   setSelectedStudyProgramsSubjects: Dispatch<SetStateAction<Record<string, string[]>>>;
+
+  generateEveryIteration: boolean;
+  setGenerateEveryIteration: Dispatch<SetStateAction<boolean>>;
 
   mutateSubjectChance: number;
   setMutateSubjectChance: Dispatch<SetStateAction<number>>;
@@ -52,6 +56,9 @@ export interface GenerateScheduleSheetProps extends Sheet.SheetRootProps {
 const GeneticAlgorithmSettingsSheet = ({
   selectedStudyProgramsSubjects,
   setSelectedStudyProgramsSubjects,
+
+  generateEveryIteration,
+  setGenerateEveryIteration,
 
   mutateSubjectChance,
   setMutateSubjectChance,
@@ -184,6 +191,11 @@ const GeneticAlgorithmSettingsSheet = ({
                     <Text>{(mutateGroupChance * 100).toFixed(1)}%</Text>
                   </Flex>
                 </Flex>
+              </Flex>
+
+              <Flex align="center" gap="2">
+                <Switch checked={generateEveryIteration} onCheckedChange={setGenerateEveryIteration} />
+                <Text>Add half of the population for every iteration.</Text>
               </Flex>
 
               <Heading as="h2" size="4" mt="6">

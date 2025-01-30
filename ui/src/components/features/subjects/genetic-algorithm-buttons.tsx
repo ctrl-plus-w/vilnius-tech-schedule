@@ -19,7 +19,7 @@ export interface GeneticAlgorithmButtonsProps {
   setSelectedSubjects: Dispatch<SetStateAction<Record<string, string>>>;
 }
 
-export type Stat = { iteration: number; fitnessMean: number; best: number };
+export type Stat = { iteration: number; fitnessMean: number; best: number; population: number };
 
 const GeneticAlgorithmButtons = ({
   subjects,
@@ -37,6 +37,10 @@ const GeneticAlgorithmButtons = ({
     ),
   });
 
+  const [generateEveryIteration, setGenerateEveryIteration] = useLocalStorageState(
+    'genetic-algorithm-generate-every-iteration',
+    { defaultValue: true },
+  );
   const [maxDays, setMaxDays] = useLocalStorageState('genetic-algorithm-max-days', { defaultValue: 5 });
   const [groupFilter, setGroupFilter] = useLocalStorageState('genetic-algorithm-group-filter', { defaultValue: '' });
   const [population, setPopulation] = useLocalStorageState('genetic-algorithm-population', { defaultValue: 500 });
@@ -68,6 +72,7 @@ const GeneticAlgorithmButtons = ({
       fitnessMode,
       mutateSubjectChance,
       mutateGroupChance,
+      generateEveryIteration,
     );
 
     const _stats = genetic.iterate(iterations);
@@ -78,7 +83,17 @@ const GeneticAlgorithmButtons = ({
     const selectedSubjects = Object.fromEntries(best.subjects.map((subject) => [subject.id, subject.group]));
     setSelectedSubjects(selectedSubjects);
     setShowStatsDialog(true);
-  }, [population, credits, iterations, groupFilter, maxDays, fitnessMode, mutateSubjectChance, mutateGroupChance]);
+  }, [
+    population,
+    credits,
+    iterations,
+    groupFilter,
+    maxDays,
+    fitnessMode,
+    mutateSubjectChance,
+    mutateGroupChance,
+    generateEveryIteration,
+  ]);
 
   return (
     <Flex gap="2" {...props}>
@@ -114,6 +129,9 @@ const GeneticAlgorithmButtons = ({
         {...{
           selectedStudyProgramsSubjects,
           setSelectedStudyProgramsSubjects,
+
+          generateEveryIteration,
+          setGenerateEveryIteration,
 
           mutateSubjectChance,
           setMutateSubjectChance,
