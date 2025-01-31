@@ -31,8 +31,19 @@ export const authenticate = async (page: Page, userId: string, password: string)
   await page.waitForSelector('#user-menu-mini-foto', { timeout: 60_000 });
 };
 
+export const waitForOverlayToHide = async (page: Page) => {
+  await page.waitForFunction(() => {
+    // @ts-ignore
+    const element = document.querySelector('#resultsHorizontalTab-overlay');
+    // @ts-ignore
+    return !element || window.getComputedStyle(element).display === 'none';
+  });
+};
+
 export const getSubjectTableContent = async (page: Page, module: StudyModule) => {
   logger.info(`Retrieving the subject table content for the subject: "${module.name}" (id: "${module.id}")`);
+
+  await waitForOverlayToHide(page);
 
   const subjectSelect = await page.$('#timetable-dal_pavad');
   if (!subjectSelect) throw new Error('Failed to find the subject select element');
@@ -44,6 +55,9 @@ export const getSubjectTableContent = async (page: Page, module: StudyModule) =>
 
   await showButton.click();
   logger.debug('Retrieving the table content');
+
+  await waitForOverlayToHide(page);
+  await wait(1000);
 
   const tableContent = await page.waitForSelector('#w2 ~ .col-md-12 .tab_el-2 .col-md-12.table-container');
   if (!tableContent) throw new Error('Failed to find the table content element');
@@ -77,16 +91,9 @@ export const saveSubjects = (dir: string, subjects: Subject[]) => {
   const subjects: Subject[] = [];
 
   for (const module of Array.from(new Set(modules))) {
-    await page.waitForFunction(() => {
-      // @ts-ignore
-      const element = document.querySelector('#resultsHorizontalTab-overlay');
-      // @ts-ignore
-      return !element || window.getComputedStyle(element).display === 'none';
-    });
-
     const html = await getSubjectTableContent(page, module);
+
     subjects.push(parseSubjectCourses(html, module));
-    await wait(1000);
   }
 
   saveSubjects('subjects', subjects);
