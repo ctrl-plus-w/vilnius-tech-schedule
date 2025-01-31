@@ -29,6 +29,15 @@ export class Schedule {
     this.cachedFitness = -1;
   }
 
+  eq(schedule: Schedule) {
+    const sortByName = (a: SubjectWithSelectedGroup, b: SubjectWithSelectedGroup) => a.name.localeCompare(b.name);
+
+    const sortedSubjects = this.subjects.toSorted(sortByName);
+    const sortedScheduleSubjects = schedule.subjects.toSorted(sortByName);
+
+    return JSON.stringify(sortedSubjects) === JSON.stringify(sortedScheduleSubjects);
+  }
+
   clone() {
     return new Schedule([...this.subjects.map((subject) => structuredClone(subject))]);
   }

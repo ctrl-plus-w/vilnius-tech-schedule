@@ -1,13 +1,14 @@
-import { Dispatch, SetStateAction, useCallback } from 'react';
+import { Dispatch, SetStateAction, useCallback, useEffect } from 'react';
 
-import { GearIcon, RulerSquareIcon } from '@radix-ui/react-icons';
-import { Button, Dialog, Flex, FlexProps, Text } from '@radix-ui/themes';
+import { ChevronLeftIcon, ChevronRightIcon, GearIcon, RulerSquareIcon } from '@radix-ui/react-icons';
+import { Button, Dialog, Flex, FlexProps, IconButton, Text } from '@radix-ui/themes';
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import useLocalStorageState from 'use-local-storage-state';
 
 import GeneticAlgorithmSettingsSheet from '@/feature/subjects/genetic-algorithm-settings-sheet';
 
-import { FitnessMode, ScheduleGenetic } from '@/util/genetic';
+import { FitnessMode, Schedule, ScheduleGenetic } from '@/util/genetic';
+import { getUnique } from '@/util/schedule';
 import { filterSubjectsByStudyProgramFilter, filterSubjectsGroups } from '@/util/subjects';
 
 import STUDY_PROGRAMS from '@/constant/study-programs';
@@ -26,6 +27,13 @@ const GeneticAlgorithmButtons = ({
   setSelectedSubjects,
   ...props
 }: GeneticAlgorithmButtonsProps & FlexProps) => {
+  const [schedules, setSchedules] = useLocalStorageState<Schedule[]>('genetic-algorithm-schedules', {
+    defaultValue: [],
+  });
+  const [schedulesIndex, setSchedulesIndex] = useLocalStorageState('genetic-algorithm-schedules-index', {
+    defaultValue: 0,
+  });
+
   const [fitnessMode, setFitnessMode] = useLocalStorageState<FitnessMode>('genetic-algorithm-fitness-mode', {
     defaultValue: 'days_with_lecture_*_standard_variation',
   });
@@ -78,10 +86,13 @@ const GeneticAlgorithmButtons = ({
     const _stats = genetic.iterate(iterations);
     setStats(_stats);
 
-    const best = genetic.getBest();
+    const top50 = genetic.getTop50();
+    const top50WithPositiveScore = top50.filter(({ cachedFitness }) => cachedFitness > 0);
+    const uniqueTop50WithPositiveScore = getUnique(top50WithPositiveScore);
 
-    const selectedSubjects = Object.fromEntries(best.subjects.map((subject) => [subject.id, subject.group]));
-    setSelectedSubjects(selectedSubjects);
+    setSchedules(uniqueTop50WithPositiveScore);
+    setSchedulesIndex(0);
+
     setShowStatsDialog(true);
   }, [
     population,
@@ -90,10 +101,19 @@ const GeneticAlgorithmButtons = ({
     groupFilter,
     maxDays,
     fitnessMode,
+    selectedStudyProgramsSubjects,
     mutateSubjectChance,
     mutateGroupChance,
     generateEveryIteration,
   ]);
+
+  useEffect(() => {
+    const schedule = schedules[schedulesIndex];
+    if (!schedule) return;
+
+    const selectedSubjects = Object.fromEntries(schedule.subjects.map((subject) => [subject.id, subject.group]));
+    setSelectedSubjects(selectedSubjects);
+  }, [schedules, schedulesIndex]);
 
   return (
     <Flex gap="2" {...props}>
@@ -119,6 +139,18 @@ const GeneticAlgorithmButtons = ({
           </Flex>
         </Dialog.Content>
       </Dialog.Root>
+
+      <Flex gap="2" mr={{ initial: '0', md: '3' }} width={{ initial: '100%', md: 'auto' }}>
+        <IconButton onClick={() => setSchedulesIndex((v) => Math.max(0, v - 1))}>
+          <ChevronLeftIcon />
+        </IconButton>
+        <Button className="grow md:grow-0" disabled>
+          {schedulesIndex + 1}/{schedules.length} ({schedules[schedulesIndex]?.cachedFitness.toFixed(2) ?? '-'})
+        </Button>
+        <IconButton onClick={() => setSchedulesIndex((v) => Math.min(Math.max(schedules.length - 1, 0), v + 1))}>
+          <ChevronRightIcon />
+        </IconButton>
+      </Flex>
 
       <Button onClick={() => setShowStatsDialog(true)} disabled={!stats.length} variant="soft">
         <RulerSquareIcon />

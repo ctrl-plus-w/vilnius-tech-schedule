@@ -11,6 +11,7 @@ import {
 } from 'date-fns';
 
 import { getNthDayInInterval, resetIntervalEnd, resetIntervalStart } from '@/util/date';
+import { Schedule } from '@/util/genetic';
 
 import { EventKind, IEventDaysEvent, TScheduleEvent } from '@/type/schedule';
 
@@ -82,4 +83,8 @@ export const getEventDaysEvents = (originalEvent: TScheduleEvent): IEventDaysEve
     ...middleEvents.map((event) => ({ event, kind: EventKind.MIDDLE })),
     { event: endEvent, kind: EventKind.END },
   ].map((event) => ({ ...event, originalEvent }));
+};
+
+export const getUnique = (schedules: Schedule[]) => {
+  return schedules.filter((schedule, index, self) => self.findIndex((s) => s.eq(schedule)) === index);
 };
