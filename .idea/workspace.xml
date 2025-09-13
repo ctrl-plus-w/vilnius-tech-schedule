@@ -28,12 +28,12 @@
     &quot;assignee&quot;: &quot;ctrl-plus-w&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ctrl-plus-w/nextjs-tailwindcss-template.git",
-    "accountId": "4bb7a6d3-9585-4e58-9784-bd46339998d8"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ctrl-plus-w/nextjs-tailwindcss-template.git&quot;,
+    &quot;accountId&quot;: &quot;4bb7a6d3-9585-4e58-9784-bd46339998d8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -51,10 +51,9 @@
     "Node.js.index.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "<unknown>",
     "javascript.nodejs.core.library.configured.version": "22.2.0",
     "javascript.nodejs.core.library.typings.version": "22.2.0",
-    "last_opened_file_path": "/Users/lukaslaudrain/dev/pro-projects/vilnius-tech-schedule/ui/src/components/features",
+    "last_opened_file_path": "/Users/lukaslaudrain/dev/projects/vilnius-tech-schedule",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,19 +62,20 @@
     "nodejs_package_manager_path": "pnpm",
     "npm.Dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lukaslaudrain/dev/pro-projects/vilnius-tech-schedule/scraper/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/lukaslaudrain/dev/pro-projects/vilnius-tech-schedule/ui/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "ts.external.directory.path": "/Users/lukaslaudrain/dev/projects/vilnius-tech-schedule/ui/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scraper" />
       <recent name="$PROJECT_DIR$/ui/src/components/features" />
       <recent name="$PROJECT_DIR$/ui/src/constants" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/scraper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documentation" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -94,7 +94,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.24807.6" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.26775.11" />
       </set>
     </attachedChunks>
   </component>
@@ -115,6 +115,9 @@
       <workItem from="1736871928814" duration="7018000" />
       <workItem from="1736929214332" duration="6316000" />
       <workItem from="1737797065287" duration="7951000" />
+      <workItem from="1757768892655" duration="1551000" />
+      <workItem from="1757770451451" duration="85000" />
+      <workItem from="1757770555101" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="feat: user auth &amp; cars unavailable dates retrieval">
       <option name="closed" value="true" />
