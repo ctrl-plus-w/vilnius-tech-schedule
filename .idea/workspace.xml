@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daa04a24-8c1a-42c7-a91e-58cdd7e67f0c" name="Changes" comment="feat: set unavailable dates">
-      <change beforePath="$PROJECT_DIR$/ui/.vscode/snippets.code-snippets" beforeDir="false" />
-    </list>
+    <list default="true" id="daa04a24-8c1a-42c7-a91e-58cdd7e67f0c" name="Changes" comment="chore: documentation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ui" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -28,12 +26,12 @@
     &quot;assignee&quot;: &quot;ctrl-plus-w&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ctrl-plus-w/nextjs-tailwindcss-template.git&quot;,
-    &quot;accountId&quot;: &quot;4bb7a6d3-9585-4e58-9784-bd46339998d8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ctrl-plus-w/vilnius-tech-schedule.git",
+    "accountId": "4bb7a6d3-9585-4e58-9784-bd46339998d8"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -51,6 +49,7 @@
     "Node.js.index.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "22.2.0",
     "javascript.nodejs.core.library.typings.version": "22.2.0",
     "last_opened_file_path": "/Users/lukaslaudrain/dev/projects/vilnius-tech-schedule",
@@ -62,7 +61,7 @@
     "nodejs_package_manager_path": "pnpm",
     "npm.Dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/lukaslaudrain/dev/pro-projects/vilnius-tech-schedule/scraper/node_modules/prettier",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "/Users/lukaslaudrain/dev/projects/vilnius-tech-schedule/ui/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -118,6 +117,7 @@
       <workItem from="1757768892655" duration="1551000" />
       <workItem from="1757770451451" duration="85000" />
       <workItem from="1757770555101" duration="13000" />
+      <workItem from="1757770570394" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="feat: user auth &amp; cars unavailable dates retrieval">
       <option name="closed" value="true" />
@@ -199,16 +199,34 @@
       <option name="project" value="LOCAL" />
       <updated>1736934886206</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="chore: documentation">
+      <option name="closed" value="true" />
+      <created>1757770620500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757770620500</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
-      <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/ui" />
     </ignored-roots>
     <MESSAGE value="feat: user auth &amp; cars unavailable dates retrieval" />
@@ -221,6 +239,7 @@
     <MESSAGE value="fix: cars days count check" />
     <MESSAGE value="feat: scrape fns exported" />
     <MESSAGE value="feat: set unavailable dates" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: set unavailable dates" />
+    <MESSAGE value="chore: documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: documentation" />
   </component>
 </project>
